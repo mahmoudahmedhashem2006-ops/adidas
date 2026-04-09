@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 17, 2, 0.923), rgba(17, 0, 0, 0.819));
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    width: 80%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    border: 1px solid #777;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.shape {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background: brown;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    z-index: -1;
+}
+
+nav .logo {
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav .logo:hover {
+    text-shadow: 2px 2px 5px wheat;
+    scale: 1.05;
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0px 6px;
+}
+
+nav ul li a {
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+nav ul {
+
+    border-radius: 20px;
+
+
+}
+
+nav ul li a:hover {
+    color: beige;
+    text-shadow: 0 0 15px #fff, 0 0 10px #ffff, 0 0 15px #fff;
+    transform: scale(1.8);
+    border-bottom: 2px solid white;
+
+}
+
+.content {
+    display: flex;
+
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+
+.content .text {
+    color: antiquewhite;
+    font-size: bold;
+    width: 40%;
+}
+
+.content .text h2 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.content .text p {
+    font-size: medium;
+    line-height: 20px;
+
+}
+
+.content .image {
+    width: 40%;
+}
+
+.content .image img {
+    width: 400px;
+}
+
+@media(max-width:768px) {
+    .container nav {
+       flex-direction: column;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    nav .logo{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    nav ul li a{
+        font-size: 17px;
+        
+       
+    }
+
+    .content .text h2 {
+        font-size: 20px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .content .text p {
+        font-size: 17px;
+        width: 100%;
+        margin-top: 15px;
+        letter-spacing: 1px;
+
+    }
+
+    .content .image img {
+        width: 100%;
+        margin-top: 15px;
+
+    }
+
+    .content {
+        display: flex;
+        text-align: center;
+        flex-flow: column;
+        gap: 20px;
+        width: 100%;
+    }
+}
